@@ -7,6 +7,7 @@ import { DropModule } from './drop/drop.module';
 import { UserModule } from './user/user.module';
 import { AreaModule } from './area/area.module';
 import { PlaceModule } from './place/place.module';
+import { ImageController } from './image/image.controller';
 
 @Module({
   imports: [TypeOrmModule.forRoot(),
@@ -15,7 +16,7 @@ import { PlaceModule } from './place/place.module';
             AreaModule,
             PlaceModule
           ],
-  controllers: [AppController],
+  controllers: [AppController, ImageController],
   providers: [AppService],
 })
 

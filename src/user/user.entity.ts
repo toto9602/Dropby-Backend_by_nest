@@ -1,5 +1,6 @@
 import { Drop } from "src/drop/drop.entity";
 import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { IsEmail } from "class-validator";
 
 @Entity()
 export class User {
@@ -9,6 +10,7 @@ export class User {
     @Column("varchar", {length:20})
     nickname:string;
 
+    @IsEmail()
     @Column("varchar", {length:30})
     email:string;
 
